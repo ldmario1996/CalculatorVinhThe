@@ -19,22 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i80-Zs-Fg9" userLabel="Display View">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i80-Zs-Fg9" userLabel="Display View" customClass="GradientView" customModule="CalculatorVinhThe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-qu-ZTX">
-                                        <rect key="frame" x="173" y="160" width="30" height="58"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEF-1s-REe">
+                                        <rect key="frame" x="13" y="67" width="349" height="36"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKd-qu-ZTX">
+                                        <rect key="frame" x="172" y="162" width="30" height="58"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                         <color key="textColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEF-1s-REe">
-                                        <rect key="frame" x="13" y="73" width="349" height="30"/>
-                                        <color key="backgroundColor" red="0.28246105300000002" green="0.74832210919999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.28246105301965951" green="0.74832210923275244" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -44,10 +43,10 @@
                                     <constraint firstAttribute="trailing" secondItem="oEF-1s-REe" secondAttribute="trailing" constant="13" id="IX2-WX-Pm3"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTg-6X-bKv" userLabel="Calculator View">
+                            <view tag="110" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTg-6X-bKv" userLabel="Calculator View" customClass="GradientView" customModule="CalculatorVinhThe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="292" width="375" height="375"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-kJ-00N">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-kJ-00N" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="13" y="132" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -57,8 +56,11 @@
                                         <state key="normal" title="4">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSz-cV-5me"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-Ic-u0m">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBz-Ic-u0m" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="105" y="132" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -68,8 +70,11 @@
                                         <state key="normal" title="5">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heK-mP-rTU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdG-W2-ch2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdG-W2-ch2" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="197" y="132" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -79,8 +84,11 @@
                                         <state key="normal" title="6">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vuk-W9-WUy"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acS-2Q-JKt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acS-2Q-JKt" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="13" y="213" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -91,8 +99,11 @@
                                         <state key="normal" title="1">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evc-Nk-8WS"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxN-Jh-Wz7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxN-Jh-Wz7" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="105" y="213" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -103,8 +114,11 @@
                                         <state key="normal" title="2">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEU-AJ-O4N"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-il-C7P">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-il-C7P" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="197" y="213" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -115,8 +129,11 @@
                                         <state key="normal" title="3">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nNm-Sq-gvb"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQQ-aB-IGU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQQ-aB-IGU" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="289" y="213" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -127,8 +144,11 @@
                                         <state key="normal" title="-">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXA-mA-7Bt"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exJ-lx-bWL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exJ-lx-bWL" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="197" y="294" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -140,8 +160,11 @@
                                         <state key="normal" title=".">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlU-B9-O5K"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-vq-G6m">
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-vq-G6m" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="289" y="294" width="73" height="62"/>
                                         <color key="backgroundColor" red="1" green="0.71540017690000002" blue="0.078078905769999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -153,15 +176,21 @@
                                         <state key="normal" title="=">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="equalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tpi-Im-Wdh"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-S5-Gz5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-S5-Gz5" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="13" y="294" width="165" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="0">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O64-gf-zAt"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISg-1U-MGu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISg-1U-MGu" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="13" y="51" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -171,8 +200,11 @@
                                         <state key="normal" title="7">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DcS-aC-sKD"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-Ix-b8i">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-Ix-b8i" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="105" y="51" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -182,8 +214,11 @@
                                         <state key="normal" title="8">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crE-PG-OLP"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rK-A5-Htb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rK-A5-Htb" customClass="NumberButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="197" y="51" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -193,8 +228,11 @@
                                         <state key="normal" title="9">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Md9-Vt-rgs"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyP-ML-gbh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyP-ML-gbh" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="289" y="51" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -204,8 +242,11 @@
                                         <state key="normal" title="*">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCk-WY-lnX"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTJ-Tk-Mll">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTJ-Tk-Mll" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="289" y="132" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.05447612617" green="0.1387812883" blue="0.18321974730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -215,6 +256,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOc-kg-iMU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.05447612617373087" green="0.13878128831742736" blue="0.18321974734042556" alpha="1" colorSpace="calibratedRGB"/>
@@ -323,7 +367,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Zh-2L-csl" userLabel="Middle View">
                                 <rect key="frame" x="0.0" y="262" width="375" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-wK-rQD">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xra-wK-rQD" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="107" y="0.0" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.29070723640000001" green="0.81281166890000001" blue="0.47308205289999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -332,8 +376,11 @@
                                         <state key="normal" title="+/-">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7k-0L-Bei"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77n-sX-KUw">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77n-sX-KUw" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="198" y="0.0" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.29070723640000001" green="0.81281166890000001" blue="0.47308205289999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -342,8 +389,11 @@
                                         <state key="normal" title="%">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M3d-L6-Wex"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-mp-BaU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-mp-BaU" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="289" y="0.0" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.29070723640000001" green="0.81281166890000001" blue="0.47308205289999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -352,8 +402,11 @@
                                         <state key="normal" title="/">
                                             <color key="titleColor" red="0.99097199140000003" green="0.99097199140000003" blue="0.99097199140000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0F-uj-SWa"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys6-l0-qCd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys6-l0-qCd" customClass="OperatorButton" customModule="CalculatorVinhThe" customModuleProvider="target">
                                         <rect key="frame" x="13" y="0.0" width="73" height="62"/>
                                         <color key="backgroundColor" red="0.29070723639301188" green="0.81281166888297873" blue="0.47308205288671162" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -362,6 +415,9 @@
                                         <state key="normal" title="AC">
                                             <color key="titleColor" red="0.95061476889999996" green="1" blue="0.99622566840000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="acAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhD-E4-8U5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -413,6 +469,8 @@
                     <connections>
                         <outlet property="distanceBetweenInputTextFieldAndResultLabel" destination="G5r-1E-qtz" id="d2N-zR-SIx"/>
                         <outlet property="distanceBetweenResultLabelAndMiddleView" destination="0tG-Cy-EmV" id="HH5-SB-vDy"/>
+                        <outlet property="inputTextField" destination="oEF-1s-REe" id="h9x-IG-V58"/>
+                        <outlet property="resultLabel" destination="SKd-qu-ZTX" id="7d1-EI-wm4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
